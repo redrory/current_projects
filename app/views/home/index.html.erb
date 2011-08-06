@@ -1,4 +1,8 @@
-<h1><%= link_to "#{params[:username]}'s Projects", "http://github.com/#{params[:username]}" %><span><%= link_to 'Back to excid3.com', "http://excid3.com", :class => "right" %></h1>
+<h1><%= link_to "What's your current Projects?", "http://github.com/#{params[:username]}" %>
+	<span></h1>
+	<%= link_to "Sign in with GitHub", "github.com" %>	to find out
+		
+		
 <%- if @repos%>
 <ul>
   <%- @repos.reverse_each do |repo| %>
@@ -18,4 +22,5 @@
 
 <div id="footer">
   Lovingly created by <%= link_to "Chris Oliver", "http://excid3.com" %>
+  Fork'd from <%= link_to "excid3", "http://github.com/excid3" %>
 </div>

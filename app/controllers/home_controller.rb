@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   def index
     # I'll be the default if no username was passed
     #TODO: Add a notice if no username was passed
-    params[:username] ||= 'excid3'
+    params[:username] ||= 'redrory'
     
     list = Net::HTTP.get URI.parse("http://github.com/api/v2/yaml/repos/show/#{params[:username]}")
     @repos = YAML::load(list)["repositories"]
